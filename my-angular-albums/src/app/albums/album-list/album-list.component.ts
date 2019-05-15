@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Album } from "../album.model";
+import { ALBUMS } from "../albums.data";
 
 @Component({
   selector: 'app-album-list',
@@ -8,13 +9,13 @@ import { Album } from "../album.model";
 })
 export class AlbumListComponent implements OnInit {
   albumsArray: Album[];
-  lastAlbumClicked: String;
+  lastAlbumClicked: string;
   constructor() { }
 
   ngOnInit(): void {
 
-    this.albumsArray = [
-        {
+    this.albumsArray =  ALBUMS;
+     /*   {
             id: 1,
             artist: 'Tremonti',
             albumName: 'Dust',
@@ -58,13 +59,13 @@ export class AlbumListComponent implements OnInit {
             url:
                 'https://www.allmusic.com/album/the-beatles-white-album-mw0000418113',
         },
-    ];
+    ];*/
     console.log(this.albumsArray);
 }
 
 parentFunctionHandler(album) {
-  //alert('Album ' + album.albumName + ' was sent from the album card component');
-  this.lastAlbumClicked = album.albumName
+  // alert('Album ' + album.albumName + ' was sent from the album card component');
+  this.lastAlbumClicked = album.albumName;
 }
 
 }
