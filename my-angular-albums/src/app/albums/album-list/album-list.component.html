@@ -5,5 +5,7 @@
  <div class="container-fluid">
   <div class="card-deck">
     <app-album-card
-    *ngFor="let album of albumsArray" [album]="album" (albumClicked)="parentFunctionHandler($event)"></app-album-card>  </div>
+    *ngFor="let album of albumsArray | async" [album]="album"
+    (albumClicked)="parentFunctionHandler($event)"
+    ></app-album-card>  </div>
 </div>
