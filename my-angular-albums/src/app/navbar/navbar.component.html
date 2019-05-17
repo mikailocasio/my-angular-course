@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" routerLink="/">
     <img
       src="assets/album.gif"
@@ -26,15 +26,24 @@
     <div class="navbar-nav">
       <a
         class="nav-item nav-link"
-        routerLink="/about"
-        routerLinkActive="active"
-        >Home</a
-      >
-      <a
-        class="nav-item nav-link"
         routerLink="/albums"
         routerLinkActive="active"
         >View Albums</a
+      >
+
+      <a
+        class="nav-item nav-link"
+        routerLink="/add-album"
+        routerLinkActive="active"
+        >Add Album</a
+      >
+
+      <a
+        routerLinkActive="active"
+        routerLink="/login"
+        class="nav-item nav-link"
+        (click)="loginOrOut()"
+        >{{ loginLogoutText }}</a
       >
     </div>
   </div>

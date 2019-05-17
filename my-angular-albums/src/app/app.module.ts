@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,10 @@ import { ReverseStrPipe } from './reverse-str.pipe';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AlbumDetailsComponent } from './albums/album-details/album-details.component';
+import { AddAlbumComponent } from './albums/add-album/add-album.component';
+
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +24,18 @@ import { NotfoundComponent } from './notfound/notfound.component';
     ReverseStrPipe,
     AboutComponent,
     NavbarComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    AlbumDetailsComponent,
+    AddAlbumComponent,
+
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
